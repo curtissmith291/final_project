@@ -1,1 +1,1 @@
-# texas_eq_final_project
+# final_project
