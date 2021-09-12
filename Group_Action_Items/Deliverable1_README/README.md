@@ -24,7 +24,7 @@ We are collaborating via Slack and Zoom. Primarily chatting via slack and zoom w
 
 We are going to be working with a dataset that contains the top 50 rated beers across 112 styles of beer, with about 5500 beers in total. We are going to build a model that will group beers together based on similar taste profiles from a variety of features including but not limited to abv, average rating of a beer, minimum IBU, and maximum IBU.
 
-Most people have a go to beer or a go to sytle of beer. Some prefer lagers, some prefer pisners and some are fancy and desire IPAs. Typically, different beer styles are know for different qualities and taste profiles. A classic pisnler is known for its malty and sweetness while a pale ale is known for its fruity, and citrius-like profile.
+Most people have a go to beer or a go to sytle of beer. Some prefer lagers, some prefer pilsners and some are fancy and desire IPAs. Typically, different beer styles are known for different qualities and taste profiles. A classic pilsner is known for its malty and sweetness while a pale ale is known for its fruity, and citrius-like profile.
 
 Although most beers within a given style, tend to follow similar patterns, there are some cross overs between beer styles and an indivudal who limits themselves to one type of beer, may be missing out on other great beers that would match their palate.
 
@@ -52,3 +52,7 @@ Our end goal is to have an interactive website or app that will allow a user to 
 ![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable1_README/Images/knn_model2.png)
 
 ### Database
+
+![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable1_README/Images/db.png)
+
+![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable1_README/Images/db_schema.png)
