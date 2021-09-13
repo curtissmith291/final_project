@@ -35,11 +35,11 @@ Although most beers within a given style, tend to follow similar patterns, there
 
 ## Questions We Hope to Answer
 
-- Which beers are closely have closely related flavor profiles, regardless of the style to which they belong?
+- Which beers have closely related flavor profiles, regardless of the style to which they belong?
 
 ## Machine Learning Model
 
-- We initially wanted to use a K-means clustering model but given our particular dataset, we decided to look into a supervised machine learning. As part of our initial data preprocessing, we are going to experiment with the KNN algorithm. Since we are trying to to group different styles of beers based of their ABV {correct me if I am wrong here}, we are hoping to use a model that can learn how to label other points based off of previously labeled points. Throughout testing, we are also exploring looking into utilizing a Random Forest model
+- We initially wanted to use a K-means clustering model but given our particular dataset, we decided to look into a supervised machine learning. As part of our initial data preprocessing, we are going to experiment with the KNN algorithm. Since we are trying to group different styles of beers based of their ABV {correct me if I am wrong here}, we are hoping to use a model that can learn how to label other points based off of previously labeled points. Throughout testing, we are also exploring looking into utilizing a Random Forest model
 
 - After additional EDA, we determined to use unsupervised machine learning, specifically k-means clustering, to cluster the input factors. After a full proof of concept has been created, additional clustering algorithms will be explored (e.g., neural network). 	 
 
