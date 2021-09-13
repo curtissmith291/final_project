@@ -27,7 +27,7 @@ We are going to be working with a dataset that contains the top 50 rated beers a
 
 The planned clustering model will use unsupervised learning to group together beers based on flavor profiles (e.g., malty, sweet, fruity). The end goal is to create an interactive dashboard that allows a user to select/input a known beer and return X number of beers that are clustered near the input beer. The nearby clustered beers will ostensibly be very similar in flavor profile to the input beer. 
 
-Most people have a go to beer or a go to sytle of beer. Some prefer lagers, some prefer pilsners and some are fancy and desire IPAs. Typically, different beer styles are known for different qualities and taste profiles. A classic pilsner is known for its malty and sweetness while a pale ale is known for its fruity, and citrius-like profile.
+Most people have a go to beer or a go to style of beer. Some prefer lagers, some prefer pilsners and some are fancy and desire IPAs. Typically, different beer styles are known for different qualities and taste profiles. A classic pilsner is known for its malty and sweetness while a pale ale is known for its fruity, and citrius-like profile.
 
 
 Although most beers within a given style, tend to follow similar patterns, there are some cross overs between beer styles and an individual who limits themselves to one type of beer, may be missing out on other great beers that would match their palate.
