@@ -32,6 +32,7 @@ Most people have a go to beer or a go to style of beer. Some prefer lagers, some
 
 Although most beers within a given style, tend to follow similar patterns, there are some cross overs between beer styles and an individual who limits themselves to one type of beer, may be missing out on other great beers that would match their palate.
 
+Additionally, the preference of beer is correlated to the geographical location. One location might promote one type of beer, flavor and style, vs the other locations that promotes different types of beers that is more local to the particular location.
 
 ## Questions We Hope to Answer
 
