@@ -27,7 +27,7 @@ We are going to be working with a dataset that contains the top 50 rated beers a
 
 The planned clustering model will use unsupervised learning to group together beers based on flavor profiles (e.g., malty, sweet, bitter). The end goal is to create an interactive dashboard that allows a user to select/input a known beer and return X number of beers that are clustered near the input beer as a recommendation to try. The nearby clustered beers will ostensibly be very similar in flavor profile to the input beer.
 
-Most people have a go to beer or a go to sytle of beer. Some prefer lagers, some prefer pilsners, and some are fancy and desire IPAs. Typically, different beer styles are known for different qualities and taste profiles. A classic pilsner is known for its malty and sweetness while a pale ale is known for its fruity, and citrius-like profile.
+Most people have a go to beer or a go to style of beer. Some prefer lagers, some prefer pilsners, and some are fancy and desire IPAs. Typically, different beer styles are known for different qualities and taste profiles. A classic pilsner is known for its malty and sweetness while a pale ale is known for its fruity, and citrus-like profile.
 
 
 Although most beers within a given style, tend to follow similar patterns, there are some cross overs between beer styles, and an individual who limits themselves to one type of beer may be missing out on other great beers that would match their palate.
@@ -35,11 +35,11 @@ Although most beers within a given style, tend to follow similar patterns, there
 
 ## Questions We Hope to Answer
 
-- Which beers have closely related flavor profiles, regardless of the style to which they belong, to a users prefered beer?
+- Which beers have closely related flavor profiles, regardless of the style to which they belong, to a user’s preferred beer?
 
 ## Machine Learning Model
 
-- We initially looked at K-means clustering and KNN models, but given our particular dataset and goals, we decided to use the unsupervised machine learning method with K-means. Our model will use k-means to split the population of beers into several classes (based on flavor profile data) and then we will refine each class in a subset of classes. From that refinement, we will try to create an ordered list of recommendations that start with data points closest to the input data. Throughout testing we are also exploring what is unique between classes and sub-classes.
+- We initially looked at K-means clustering and KNN models, but given our dataset and goals, we decided to use the unsupervised machine learning method with K-means. Our model will use k-means to split the population of beers into several classes (based on flavor profile data) and then we will refine each class in a subset of classes. From that refinement, we will try to create an ordered list of recommendations that start with data points closest to the input data. Throughout testing we are also exploring what is unique between classes and sub-classes.
 
 
 ### EDA Processing
@@ -61,7 +61,7 @@ Although most beers within a given style, tend to follow similar patterns, there
 ### Database
 
 
-Initially, a PostgreSQL database was chosen for the project; however, after additional consideration we switched to SQLite3. SQLite allows for easier integration of the relatively small amount of data for separate users. Whereas PostgreSQL requires a server (whether local or not), the SQLite database file can be stored in the same git-connected directory as the rest of the other files; this allows for easier integration of the database between multiple users without having to host the database on a remote server. Additionally, Python contains a built in module (SQLite3) that allows for easy importing of SQLite databases. 
+Initially, a PostgreSQL database was chosen for the project; however, after additional consideration we switched to SQLite3. SQLite allows for easier integration of the relatively small amount of data for separate users. Whereas PostgreSQL requires a server (whether local or not), the SQLite database file can be stored in the same git-connected directory as the rest of the other files; this allows for easier integration of the database between multiple users without having to host the database on a remote server. Additionally, Python contains a built-in module (SQLite3) that allows for easy importing of SQLite databases. 
 
 The current database contains the following tables:
 
