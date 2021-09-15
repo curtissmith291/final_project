@@ -1,0 +1,65 @@
+-- Create Beer_info tables
+CREATE TABLE beer_info (
+	beer_id INT PRIMARY KEY,
+	beer_Name VARCHAR,
+	beer_Style VARCHAR,
+	Style_Key INT,
+	Brewery VARCHAR,
+	Description TEXT,
+	ABV DECIMAL,
+	Ave_Rating DECIMAL,
+	Min_IBU DECIMAL,
+	Max_IBU DECIMAL,
+	Astringency DECIMAL,
+	Body DECIMAL,
+	Alcohol DECIMAL,
+	Bitter DECIMAL,
+	Sweet DECIMAL,
+	Sour DECIMAL,
+	Salty DECIMAL,
+	Fruits DECIMAL,
+	Hoppy DECIMAL,
+	Spices DECIMAL,
+	Malty DECIMAL
+	);
+
+--display beer_info data output
+SELECT * FROM  beer_info
+
+-- Create Top 250 Beers Table
+CREATE TABLE top250_beers (
+	beer_id INT PRIMARY KEY,
+	beer_Name VARCHAR,
+	beer_Style VARCHAR,
+	Style_Key INT,
+	Brewery VARCHAR,
+	Description TEXT,
+	ABV DECIMAL,
+	Ave_Rating DECIMAL,
+	Min_IBU DECIMAL,
+	Max_IBU DECIMAL,
+	Astringency DECIMAL,
+	Body DECIMAL,
+	Alcohol DECIMAL,
+	Bitter DECIMAL,
+	Sweet DECIMAL,
+	Sour DECIMAL,
+	Salty DECIMAL,
+	Fruits DECIMAL,
+	Hoppy DECIMAL,
+	Spices DECIMAL,
+	Malty DECIMAL
+	);
+
+-- display top250 data output
+SELECT * FROM  top250_beers
+
+--joining both tables
+SELECT * 
+	INTO combined_beers
+	FROM beer_info
+	UNION ALL
+	SELECT * FROM top250_beers;
+
+--display new table
+SELECT * FROM combined_beers;
