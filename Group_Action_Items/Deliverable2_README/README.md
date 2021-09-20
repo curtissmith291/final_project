@@ -1,4 +1,3 @@
-# Deliverable 2 README
 
 ## Group Members
 
@@ -31,10 +30,10 @@ Although most beers within a given style, tend to follow similar patterns, there
 
 ## Dataset 
 
-Initially we used the following dataset from kaggle. [Beer Tasting Profiles](https://www.kaggle.com/stephenpolozoff/top-beer-information)
+Initially we used the following dataset from Kaggle. [Beer Tasting Profiles](https://www.kaggle.com/stephenpolozoff/top-beer-information)
 
 
-The beers were collected via webscraping from beeradvocate.com. The top 50 beers from each beer style was added to the dataset. 
+The beers were collected via web scraping from beeradvocate.com. The top 50 beers from each beer style was added to the dataset. 
 
 
 ### Preliminary Data Preprocessing
@@ -52,7 +51,7 @@ Our dataset has 13 features. Example descriptor values indicated in the par
 
 - ABV
 - Avg Rating
-- Astingency
+- Astringency
 - Body
 - Alcohol
 - Bitter
@@ -70,27 +69,42 @@ For example, there were 5 different categories for "Bocks", Bock - Doppelbock, B
 
 ### Preliminary Feature Engineering
 
-After tweaking our K-means model and realizing that it was prone to outliers, we filtered out beer based off of their ABV fomr 3% to 13%. This greatly reduced the number of data points on the extremes of both ends.
+After tweaking our K-means model and realizing that it was prone to outliers, we filtered out beer based off of their ABV from 3% to 13%. This greatly reduced the number of data points on the extremes of both ends.
 
 ![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable1_README/Images/preprocessing2.png)
 
-We also reduced the amount of beer style from 112 to 45. In early testign of the model's effectiveness to predict styles of beer, we learned that the more features we tried to fit the model with, the more it was prone to disidentifiying the correct beer styles. Upon further inspection, we realized that many of the beer style were similar enough to be combined into few categories thereby reducing the amount of irrlevant datapoints being fit into the model. This gave our model more flexibility and was able to train the model more effectively. 
+We also reduced the amount of beer style from 112 to 45. In early testing of the model's effectiveness to predict styles of beer, we learned that the more features we tried to fit the model with, the more it was prone to misidentifying the correct beer styles. Upon further inspection, we realized that many of the beer style were similar enough to be combined into few categories thereby reducing the amount of irrelevant datapoints being fit into the model. This gave our model more flexibility and was able to train the model more effectively. 
 
 ![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable2_README/Images/beer_styles.png)
 
-As we were outlining our dashboard, we ran into issue about the popularity of beers and the lack of common beers in our dataset. The original dataset was created from the top 50 rated beer in a given beer category. We made an assumption that the average beer drinker of your Bud Lite and Miller lite, will not leave a review on a webpage. The reviews that are seen, are likely to be your craft beer enthusiast that want to help others appreciate their love for a particular craft beer. For the interactive portion of this dataset, we wanted to account for beers that the average adult would be able to identify. It will also give our model more data points from your typical" beer to you more specilaized beer. To account for this, we scraped another top 250 beers from the beeradvocate.com site, and added them to our dataset, following the same web scraping cadence mentioned above.
+As we were outlining our dashboard, we ran into issue about the popularity of beers and the lack of common beers in our dataset. The original dataset was created from the top 50 rated beer in each beer category. Our assumption is that the average beer drinker of your Bud Lite and Miller lite, will not leave a review on a webpage. The reviews that are seen, are likely to be your craft beer enthusiast that want to help others appreciate their love for a particular craft beer. For the interactive portion of this dataset, we wanted to account for beers that the average adult would be able to identify. It will also give our model more data points from your typical" beer to you more specialized beer. To account for this, we scraped another top 250 beers from the beeradvocate.com site, and added them to our dataset, following the same web scraping cadence mentioned above.
 
-After adding another 250 beers to the dataset, we still were unsatisfied with our model clustering. Upon futher inspection, we realized that our original dataset was only taking into account the top 50 reviews and it could be skewing or data. The assumption was by only using the top 50 reviews, we are only getting data from beer enthusiats that were blown away by a typical beer. We wanted to incorporate a full spectrum of beer reviews, from the best, average and bad. This will help give our model a complete view of the profile of the beer. Since our data is coming from descriptor values, we assumed that we want to be able to account for both the POSITIVE and NEGATIVE descriptor values.
+After adding another 250 beers to the dataset, we still were unsatisfied with our model clustering. Upon further inspection, we realized that our original dataset was only taking into account the top 50 reviews, and it could be skewing or data. The assumption was by only using the top 50 reviews, we are only getting data from beer enthusiasts that were blown away by a typical beer. We wanted to incorporate a full spectrum of beer reviews, from the best, average, and bad. This will help give our model a complete view of the profile of the beer. Since our data is coming from descriptor values, we assumed that we want to be able to account for both the POSITIVE and NEGATIVE descriptor values.
 
-We reran our web scraping method, this time utilizing beers from the [Top Rated Beer Styles](https://www.beeradvocate.com/beer/top-styles/). We only wanted to use beers that has a minimum of 100 reviews. We would iterate through each of the following beer styles, Bocks, Brown ALes, Dark Ales, Dark Lagers, Hybrid beers, IPAs, Pale Ales, Pale Lagers, Porters, Specialty Beers, Stouts, Strong Ales, Wheat Beers and Wild/Sour Beers. 
+#### Web Scraping Data
+
+We reran our web scraping method, this time utilizing beers from the [Top Rated Beer Styles](https://www.beeradvocate.com/beer/top-styles/). We only wanted to use beers that has a minimum of 100 reviews. We would iterate through each of the following beer styles, Bocks, Brown Ales, Dark Ales, Dark Lagers, Hybrid beers, IPAs, Pale Ales, Pale Lagers, Porters, Specialty Beers, Stouts, Strong Ales, Wheat Beers and Wild/Sour Beers. 
+
+
+![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable1_README/Images/webscrape_styles.png)
+
+- The Webscraping Method will start at the [Beer Style Page](https://www.beeradvocate.com/beer/top-styles/) and scrape all links find the anchor and HTML tag "/beer/styles", looping through them all until it selects the correct one.
+
+-It starts with each beer style, for example Bocks, cyclying through each sub category (i.e. Bock - Doppelbock, Bock - Eisbock, Bock- Maibock, etc.) then it will move on to the next beer style and substyle.
+
+- In each substyle of beer, it loops through 100 different styles, then goes to the next page with the individual beers. 
+
+- CLicks on indivdual beer and runs a check to see if there are 100 reviews. If there are, it scrapes the first 25, then clicks the "next 25" until there are 100 total reviews
+
+![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable1_README/Images/beer_scrape.png)
 
 ## Machine Learning Model
 
-- We initially looked at K-means clustering and KNN models, but given our dataset and goals, we decided to use the unsupervised machine learning method with K-means. Our model will use k-means to split the population of beers into several classes (based on flavor profile data) and then we will refine each class in a subset of classes. From that refinement, we will try to create an ordered list of recommendations that start with data points closest to the input data. Throughout testing we are also exploring what is unique between classes and sub-classes.
+We initially looked at K-means clustering and KNN models, but given our dataset and goals, we decided to use the unsupervised machine learning method with K-means. Our model will use k-means to split the population of beers into several classes (based on flavor profile data) and then we will refine each class in a subset of classes. From that refinement, we will try to create an ordered list of recommendations that start with data points closest to the input data. Throughout testing we are also exploring what is unique between classes and sub-classes.
 
-There are a few advanatages and disadavanteages of this model. The K-Means model is fairly simple and easy to implement and scales easily with large datasets. If we needed to add more data points through the project, this model would allow us to effectively scale as we go without having to start from ground zero. Furthermore, if we decided to add/change new features of our dataset, k-means is really adaptable and accept new examples. Since we intend to have classes of beers that form intial clusters and and then subclasses of beers to further show commonalities between different beers, k-means would be great at generalizing clusters of different shapes and sizes.
+There are a few advantages and disadvantages of this model. The K-Means model is simple and easy to implement and scales easily with large datasets. If we needed to add more data points through the project, this model would allow us to effectively scale as we go without having to start from ground zero. Furthermore, if we decided to add/change new features of our dataset, k-means is adaptable and accept new examples. Since we intend to have classes of beers that form initial clusters and then subclasses of beers to further show commonalities between different beers, k-means would be great at generalizing clusters of different shapes and sizes.
 
-As far as the disadvanatgaes of this model, we have to determine our "k" value manually. We utilized both the elbow curve and the silhouette method to help determine the best "k" value for our initial model. Finding the best "k" value with the elbow curve can be a bit subjective as in the case with our model, our "k" value could be anywhere between 8-12. It will take a bit more plug and play to find the best vlaue for our model. Another disadvantage of of using K-means is that is affected by outliers and can skew the clustering of the data. We ran into that issue quite a bit in our early testing of the model. Given that our dataset is "top beers" across many obscure types of beers, generally craft beers, we found that many of the beers were on both extremes of the "ABV %". Unlike your typical American beer that you find in your local liquor store, craft beers tend to have more variety and experimentation from smaller brewers who want to think outside the box. The typical beer would have anywhere between 4.0% abv and 4.8% ABV, in our dataset we were getting ABV values on the low end of .04% and on the extremely high end of 58% abv. Even after standardizing all of our values, our initial clusters were still skewed, to account for that we eventually had to filter out beers and used a rand of ABV of 3% to 13%.
+As far as the disadvantages of this model, we have to determine our "k" value manually. We utilized both the elbow curve and the silhouette method to help determine the best "k" value for our initial model. Finding the best "k" value with the elbow curve can be a bit subjective as in the case with our model, our "k" value could be anywhere between 8-12. It will take a bit more plug and play to find the best value for our model. Another disadvantage of using K-means is that is affected by outliers and can skew the clustering of the data. We ran into that issue quite a bit in our early testing of the model. Given that our dataset is "top beers" across many obscure types of beers, generally craft beers, we found that many of the beers were on both extremes of the "ABV %". Unlike your typical American beer that you find in your local liquor store, craft beers tend to have more variety and experimentation from smaller brewers who want to think outside the box. The typical beer would have anywhere between 4.0% abv and 4.8% ABV, in our dataset we were getting ABV values on the low end of .04% and on the extremely high end of 58% abv. Even after standardizing all of our values, our initial clusters were still skewed, to account for that we eventually had to filter out beers and used a rand of ABV of 3% to 13%.
 
 
 ### Database
@@ -113,4 +127,4 @@ The current database contains the following tables:
 ![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable1_README/Images/db_schema.png)
 
 ![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable2_README/Images/join_table.png)
-
+	
