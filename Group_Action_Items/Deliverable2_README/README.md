@@ -16,11 +16,11 @@ Communication is done primarily over Slack, Google Meet, and in breakout rooms d
 
 ### Presentation Slides
 
-[Link To Presentation]()
+[Link To Presentation](https://docs.google.com/presentation/d/1dVxTKZzrLV4RA49lMKBa64_UXsmUTMQBxuq53MsO_Lk/edit#slide=id.gf0deea8e63_0_6)
 
 ### Dashboard
 
-[Google Storyboard]()
+[Dashboard Storyboard](https://docs.google.com/presentation/d/1IYfXh7JmlxBym1y45C2rC_0gVfhQEY8pzwCAztA0F0Y/edit#slide=id.p)
 
 ## Description of Topic
 
