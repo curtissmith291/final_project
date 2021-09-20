@@ -14,6 +14,14 @@
 
 Communication is done primarily over Slack, Google Meet, and in breakout rooms during Monday/Wednesday classes.
 
+### Presentation Slides
+
+[Link To Presentation]()
+
+### Dashboard
+
+[Google Storyboard]()
+
 ## Description of Topic
 
 We are going to be working with a dataset that contains the top 50 rated beers across 112 styles of beer, with approximately 5500 beers in total. We are going to build a model that will group beers together based on similar taste profiles from a variety of features including but not limited to abv, bitter	sweet, hoppy, and malty.
@@ -86,7 +94,7 @@ After adding another 250 beers to the dataset, we still were unsatisfied with ou
 We reran our web scraping method, this time utilizing beers from the [Top Rated Beer Styles](https://www.beeradvocate.com/beer/top-styles/). We only wanted to use beers that has a minimum of 100 reviews. We would iterate through each of the following beer styles, Bocks, Brown Ales, Dark Ales, Dark Lagers, Hybrid beers, IPAs, Pale Ales, Pale Lagers, Porters, Specialty Beers, Stouts, Strong Ales, Wheat Beers and Wild/Sour Beers. 
 
 
-![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable1_README/Images/webscrape_styles.png)
+![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable2_README/Images/webscrape_styles.png)
 
 - The Webscraping Method will start at the [Beer Style Page](https://www.beeradvocate.com/beer/top-styles/) and scrape all links find the anchor and HTML tag "/beer/styles", looping through them all until it selects the correct one.
 
@@ -96,7 +104,7 @@ We reran our web scraping method, this time utilizing beers from the [Top Rated 
 
 - CLicks on indivdual beer and runs a check to see if there are 100 reviews. If there are, it scrapes the first 25, then clicks the "next 25" until there are 100 total reviews
 
-![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable1_README/Images/beer_scrape.png)
+![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable2_README/Images/beer_scrape.png)
 
 ## Machine Learning Model
 
