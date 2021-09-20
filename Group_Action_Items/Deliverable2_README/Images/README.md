@@ -40,11 +40,11 @@ The beers were collected via web scraping from beeradvocate.com. The top 50 beer
 
 It consisted of 5500+ beers across 112 different styles of beer. The features were determined by the number of reviews of the beers based on flavor and aroma, mouthfeel, and taste. Based on a predefined dictionary, a web scraping tools searched for certain key words in a beer profile and if any unique value(descriptor) was found on the page, the beer was added to the data set and its unique value was given a point value. After going through the top 50 reviews for that beer, each descriptor value was added up. The numerical value in our features represent a summation of the predetermined desriptor values.
 
-![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable2_README/Images/mouth.png)
+![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable2_README/mouth.png)
 
-![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable2_README/Images/taste.png)
+![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable2_README/taste.png)
 
-![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable2_README/Images/flavor.png)
+![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable2_README/flavor.png)
 
 
 Our dataset has 13 features. Example descriptor values indicated in the par
