@@ -1,4 +1,4 @@
-# Deliverable 2 README
+# Deliverable 3 README
 
 ## Group Members
 
@@ -21,7 +21,9 @@ Communication is done primarily over Slack, Google Meet, and in breakout rooms d
 
 ### Dashboard
 
-[Dashboard Storyboard](https://docs.google.com/presentation/d/1IYfXh7JmlxBym1y45C2rC_0gVfhQEY8pzwCAztA0F0Y/edit#slide=id.p)
+[Link to Tableau Dashboard](https://docs.google.com/presentation/d/1IYfXh7JmlxBym1y45C2rC_0gVfhQEY8pzwCAztA0F0Y/edit#slide=id.p)
+
+### [Link to List of Beers]()
 
 ## Description of Topic
 
