@@ -21,9 +21,9 @@ Communication is done primarily over Slack, Google Meet, and in breakout rooms d
 
 ### Dashboard
 
-[Link to Tableau Dashboard](https://docs.google.com/presentation/d/1IYfXh7JmlxBym1y45C2rC_0gVfhQEY8pzwCAztA0F0Y/edit#slide=id.p)
+[Link to Tableau Dashboard](https://public.tableau.com/app/profile/clayton.mack/viz/BeerModeling/Story3)
 
-### [Link to List of Beers]()
+### [Link to List of Beers](https://github.com/curtissmith291/final_project/blob/main/csv_files/final_beer_names.csv)
 
 ## Description of Topic
 
