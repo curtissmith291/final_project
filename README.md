@@ -1,4 +1,4 @@
-# Deliverable 2 README
+# The Ultimate Beer Recommender
 
 ## Group Members
 
@@ -15,13 +15,21 @@
 
 Communication is done primarily over Slack, Google Meet, and in breakout rooms during Monday/Wednesday classes.
 
-### Presentation Slides
+### Presentation 
 
 [Link To Presentation](https://docs.google.com/presentation/d/1dVxTKZzrLV4RA49lMKBa64_UXsmUTMQBxuq53MsO_Lk/edit#slide=id.gf0deea8e63_0_6)
 
+### Web App
+
+[Link To Web App](https://www.curtisssmith.com/beer_recs)
+
 ### Dashboard
 
-[Dashboard Storyboard](https://docs.google.com/presentation/d/1IYfXh7JmlxBym1y45C2rC_0gVfhQEY8pzwCAztA0F0Y/edit#slide=id.p)
+[Link to Tableau Dashboard](https://public.tableau.com/app/profile/clayton.mack/viz/BeerModeling/BeerModelDashboard)
+
+### List of Input Beers
+
+[Link to List of Beers](https://github.com/curtissmith291/final_project/blob/main/csv_files/final_beer_names.csv)
 
 ## Description of Topic
 
@@ -56,10 +64,9 @@ It consisted of 5500+ beers across 112 different styles of beer. The features we
 ![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable2_README/Images/flavor.png)
 
 
-Our dataset has 13 features. Example descriptor values indicated in the par
+Our dataset has 12 features. Example descriptor values indicated below:
 
 - ABV
-- Avg Rating
 - Astringency
 - Body
 - Alcohol
@@ -92,18 +99,18 @@ After adding another 250 beers to the dataset, we still were unsatisfied with ou
 
 #### Web Scraping Data
 
-We reran our web scraping method, this time utilizing beers from the [Top Rated Beer Styles](https://www.beeradvocate.com/beer/top-styles/). We only wanted to use beers that has a minimum of 100 reviews. We would iterate through each of the following beer styles, Bocks, Brown Ales, Dark Ales, Dark Lagers, Hybrid beers, IPAs, Pale Ales, Pale Lagers, Porters, Specialty Beers, Stouts, Strong Ales, Wheat Beers and Wild/Sour Beers. 
+We reran our web scraping method, this time utilizing beers from the Beer Styles By Count of Ratings](https://www.beeradvocate.com/beer/styles/). We only wanted to use beers that has a minimum of 100 reviews. We would iterate through each of the following beer styles, Bocks, Brown Ales, Dark Ales, Dark Lagers, Hybrid beers, IPAs, Pale Ales, Pale Lagers, Porters, Specialty Beers, Stouts, Strong Ales, Wheat Beers and Wild/Sour Beers. 
 
 
 ![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable2_README/Images/webscrape_styles.png)
 
 - The Webscraping Method will start at the [Beer Style Page](https://www.beeradvocate.com/beer/top-styles/) and scrape all links find the anchor and HTML tag "/beer/styles", looping through them all until it selects the correct one.
 
--It starts with each beer style, for example Bocks, cyclying through each sub category (i.e. Bock - Doppelbock, Bock - Eisbock, Bock- Maibock, etc.) then it will move on to the next beer style and substyle.
+- It starts with each beer style, for example Bocks, cyclying through each sub category (i.e. Bock - Doppelbock, Bock - Eisbock, Bock- Maibock, etc.) then it will move on to the next beer style and substyle.
 
-- In each substyle of beer, it loops through 100 different styles, then goes to the next page with the individual beers. 
+- In each substyle of beer, it loops through 100 most rated beers, then goes to the next page with the individual beers. 
 
-- CLicks on indivdual beer and runs a check to see if there are 100 reviews. If there are, it scrapes the first 25, then clicks the "next 25" until there are 100 total reviews
+- Clicks on indivdual beer and runs a check to see if there are 75 reviews. If there are, it scrapes the first 25, then clicks the "next 25" until there are 75 total reviews
 
 ![image](https://github.com/curtissmith291/final_project/blob/rod_prelim_branch/Group_Action_Items/Deliverable2_README/Images/beer_scrape.png)
 
