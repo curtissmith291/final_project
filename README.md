@@ -8,7 +8,7 @@
 
 - Roderick Spells [Github Branch](https://github.com/curtissmith291/final_project/tree/rod_prelim_branch)
 
-- Silpa Poudel [Github Branch](https://github.com/curtissmith291/final_project/tree/silpa_final)
+- Silpa Poudel [Github Branch](https://github.com/curtissmith291/final_project/tree/silpafinal)
 
 
 ### Communication
