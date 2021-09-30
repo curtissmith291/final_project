@@ -2,7 +2,7 @@
 
 ## Group Members
 
-- Curtis Smith [Github Branch](https://github.com/curtissmith291/final_project/tree/csmith_1)
+- Curtis Smith [Github Branch](https://github.com/curtissmith291/final_project/tree/csmith_2)
 
 - Clayton Mack [Github Branch](https://github.com/curtissmith291/final_project/tree/mack)
 
@@ -21,7 +21,7 @@ Communication is done primarily over Slack, Google Meet, and in breakout rooms d
 
 ### Web App
 
-[Link To Web App](https://www.curtisssmith.com/beer_recs)
+[Link To Web App](https://www.curtisssmith.com/beer_rec)
 
 ### Dashboard
 
